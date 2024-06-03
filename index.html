@@ -1,3 +1,6 @@
+Конечно, добавим более яркие цвета и упростим дизайн, чтобы он был приятен и понятен для детей. Вот обновлённый HTML-код:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,25 +12,32 @@
             font-family: Arial, sans-serif;
             margin: 20px;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ffeb3b;
         }
         .content {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #f44336;
+            font-size: 2em;
+        }
+        h2 {
+            color: #2196f3;
         }
         p {
-            color: #666;
+            color: #333;
+            font-size: 1.2em;
         }
         .instruction {
             margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #00796b;
         }
         .balloon-grid,
         .train {
@@ -37,13 +47,13 @@
         }
         .balloon,
         .train-car {
-            background-color: #3F51B5;
+            background-color: #4caf50;
             border-radius: 50%;
             padding: 15px;
             text-align: center;
-            font-size: 18px;
-            line-height: 1.5;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1.5em;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         .balloon img,
         .train-car img {
@@ -56,14 +66,22 @@
             text-align: center;
             border: none;
             background: none;
-            font-size: 16px;
+            font-size: 1.5em;
             color: white;
             outline: none;
+        }
+        .score {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #f44336;
+        }
+        .score span {
+            font-weight: bold;
         }
         video {
             width: 100%;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
         }
     </style>
@@ -109,6 +127,8 @@
             <div class="balloon"><input type="text"></div>
         </div>
         
+        <div class="score">Баллы за задание 1: <span id="score1">0</span>/10</div>
+        
         <h2>Задание 1: Собери урожай</h2>
         
         <p class="instruction">Определи и запиши, какие числа пропущены на яблоках.</p>
@@ -126,10 +146,8 @@
             <div class="balloon"><img src="apple.png" alt="Apple"><input type="text" value="90"></div>
         </div>
         
+        <div class="score">Баллы за задание 2: <span id="score2">0</span>/10</div>
         
-
-     
-
         <h2>Задание 2: Пронумеруй вагоны поезда</h2>
         
         <p class="instruction">Расположите числа в пределах 100 в прямом и обратном порядке.</p>
@@ -159,6 +177,8 @@
             <div class="train-car"><img src="train.png" alt="Train"><input type="text"></div>
             <div class="train-car"><img src="train.png" alt="Train"><input type="text"></div>
         </div>
+        
+        <div class="score">Баллы за задание 3: <span id="score3">0</span>/10</div>
     </div>
 </body>
 </html>
